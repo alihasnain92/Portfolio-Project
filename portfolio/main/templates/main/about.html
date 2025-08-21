@@ -1,0 +1,242 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}About - Ali Hasnain{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="page-hero">
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Get to know more about my journey and passion for software development</p>
+    </div>
+</section>
+
+<!-- About Content -->
+<section class="about-content fade-in-up">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text fade-in-left">
+                <h2>Hello! I'm Ali Hasnain</h2>
+                <p>
+                    I'm a passionate Software Engineer currently pursuing my Bachelor of Computer Science
+                    at Iqra University, Karachi. My journey in technology started with curiosity and has
+                    evolved into a deep passion for creating innovative solutions that make a difference.
+                </p>
+                <p>
+                    With expertise in Python, Django, and modern web technologies, I enjoy building
+                    applications that solve real-world problems. I'm particularly interested in machine
+                    learning, web development, and creating user-friendly interfaces.
+                </p>
+                <p>
+                    When I'm not coding, I contribute to disaster management initiatives and continue
+                    learning new technologies to stay current with industry trends. I also work as a
+                    freelance graphic designer, combining creativity with technical skills.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat glow-on-hover">
+                        <h3>5+</h3>
+                        <p>Years of Education</p>
+                    </div>
+                    <div class="stat glow-on-hover">
+                        <h3>3+</h3>
+                        <p>Certifications</p>
+                    </div>
+                    <div class="stat glow-on-hover">
+                        <h3>Multiple</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image fade-in-right">
+                <div class="image-container">
+                    <div class="hero-avatar">
+                        <img src="{% static 'images/profile.png' %}" alt="Ali Hasnain" class="avatar-image"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-placeholder glow-on-hover" style="display: none;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rest of your template continues unchanged... -->
+
+<!-- Education Section -->
+<section class="education fade-in-up">
+    <div class="container">
+        <div class="section-header">
+            <h2>Education</h2>
+            <p>My academic journey and achievements</p>
+        </div>
+
+        <div class="education-timeline">
+            <div class="timeline-item fade-in-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2020 - 2025</div>
+                    <h3>Bachelor of Computer Science</h3>
+                    <h4>Iqra University, Karachi</h4>
+                    <p>Currently pursuing my degree with focus on software engineering, algorithms, and modern development practices.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <h3>Intermediate in Engineering</h3>
+                    <h4>Govt. Degree Boys College Gulistan-e-Johar</h4>
+                    <p>Higher Secondary Certificate with specialization in engineering subjects, building foundation for computer science.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <h3>Matriculation in Computer Science</h3>
+                    <h4>Happy Palace Group of School</h4>
+                    <p>Secondary School Certificate with computer science focus, where my passion for programming began.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Detail Section -->
+<section class="skills-detail">
+    <div class="container">
+        <div class="section-header">
+            <h2>Technical Expertise</h2>
+            <p>A detailed look at my technical skills and proficiency levels</p>
+        </div>
+
+        <div class="skills-categories">
+            <div class="skill-category-detail">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>C</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category-detail">
+                <h3><i class="fas fa-cogs"></i> Frameworks & Tools</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Django</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>HTML/CSS/JS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>MySQL</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience & Volunteering -->
+<section class="experience">
+    <div class="container">
+        <div class="section-header">
+            <h2>Experience & Volunteering</h2>
+            <p>Professional experience and community involvement</p>
+        </div>
+
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Freelance Graphic Designer</h3>
+                <p>
+                    Working as a freelance graphic designer, creating visual solutions for various clients
+                    and developing creative design skills alongside programming expertise.
+                </p>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Disaster Management Volunteer</h3>
+                <p class="exp-date">2023</p>
+                <p>
+                    Actively participated in disaster management initiatives, contributing to community
+                    welfare and emergency response efforts in Karachi.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Let's Work Together</h2>
+            <p>I'm always open to discussing new opportunities and exciting projects</p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn btn-primary">Get In Touch</a>
+                <a href="{% url 'projects' %}" class="btn btn-outline">View Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

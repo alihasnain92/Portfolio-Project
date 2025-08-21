@@ -1,0 +1,288 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Ali Hasnain - Software Engineer{% endblock %}
+
+{% block content %}
+<style>
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.05);
+}
+
+.hero-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.avatar-circle {
+    display: none; /* Hide the old circle with icon */
+}
+
+.scroll-indicator {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    user-select: none;
+}
+
+.scroll-indicator:hover {
+    opacity: 0.8;
+}
+
+.scroll-arrow {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+</style>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-name">Ali Hasnain</h1>
+                <h2 class="hero-title">Software Engineer</h2>
+                <p class="hero-description">
+                    Passionate about creating innovative web solutions using Python, Django, and modern technologies.
+                    Currently pursuing Computer Science at Iqra University, Karachi.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="{% url 'projects' %}" class="btn btn-primary">View My Work</a>
+                    <a href="{% url 'contact' %}" class="btn btn-secondary">Get In Touch</a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/alihasnain92" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:iamalihasnainn@gmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-avatar">
+                    <img src="{% static 'images/profile.png' %}" alt="Ali Hasnain" class="avatar-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll Down</span>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+    <div class="container">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <p>Technologies and tools I work with</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+    <h3><i class="fas fa-cogs"></i> Frameworks & Libraries</h3>
+    <div class="skill-items">
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">Keras</span>
+        <span class="skill-tag ">Flask</span>
+        <span class="skill-tag ">TensorFlow</span>
+    </div>
+</div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Oracle SQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">SQLite</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-palette"></i> Frontend</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>Some of my recent work</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Name Entity Relation (NER)</h3>
+                <p>Deep learning model using Keras and LSTM networks for natural language processing and entity recognition.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Keras</span>
+                    <span class="tag">LSTM</span>
+                    <span class="tag">Deep Learning</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>University Admission Assistant</h3>
+                <p>Advanced chatbot system designed to help students with university admission processes and academic queries.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Chatbot</span>
+                    <span class="tag">AI</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Portfolio Website</h3>
+                <p>This responsive portfolio website built with Django, showcasing my skills and projects with modern design.</p>
+                <div class="project-tags">
+                    <span class="tag">Django</span>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-cta">
+            <a href="{% url 'projects' %}" class="btn btn-outline">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="certifications">
+    <div class="container">
+        <div class="section-header">
+            <h2>Certifications</h2>
+            <p>Professional development and learning achievements</p>
+        </div>
+
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python Programming Mastery</h3>
+                <p>Udemy - July 2024</p>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Foundations</h3>
+                <p>LinkedIn - August 2025</p>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Django Essential Training</h3>
+                <p>LinkedIn - August 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for the scroll indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const skillsSection = document.getElementById('skills');
+
+    if (scrollIndicator && skillsSection) {
+        scrollIndicator.addEventListener('click', function(e) {
+            e.preventDefault();
+            skillsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+
+    // Optional: Hide scroll indicator on scroll
+    window.addEventListener('scroll', function() {
+        const heroSection = document.querySelector('.hero');
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+
+        if (scrollIndicator) {
+            if (scrolled > 100) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
